@@ -11,3 +11,21 @@ def fibs(n)
   p fibo_sequence
 end
 fibs(8)
+def fib(n)
+  if n.zero?
+    0
+  elsif n <= 2
+    1
+  else
+    fib(n - 1) + fib(n - 2)
+  end
+end
+
+def fibs_rec(n)
+  fib_seq = (0..n - 1).map do |i|
+    fib(i)
+  end
+  p fib_seq
+end
+
+fibs_rec(8)
